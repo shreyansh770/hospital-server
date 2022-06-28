@@ -2,7 +2,7 @@ const jwt = require('jsonwebtoken');
 const medicalModel = require('../model/medicalModel');
 const {
     JWT_KEY
-} = require('../secrets');
+} =process.env || require('../secrets');
 
 
 module.exports.protectRoute =

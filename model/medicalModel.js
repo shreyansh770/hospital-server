@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 
-let {
-    db_link
-} = require("../secrets");
+let {PASSWORD} = require('../secrets')
+
+let db_link = `mongodb+srv://shrey_2000:${PASSWORD}@cluster0.q20we.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
 
 mongoose.connect(db_link, {
     useNewUrlParser: true,

@@ -1,5 +1,5 @@
 const cloudinary = require('cloudinary')
-const { CLOUDNARY_NAME, API_KEY, API_SECRET } = require('../secrets')
+const { CLOUDNARY_NAME, API_KEY, API_SECRET } = process.env || require('../secrets')
 
 
 cloudinary.config({

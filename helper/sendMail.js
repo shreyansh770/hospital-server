@@ -1,7 +1,7 @@
 const nodemailer = require('nodemailer');
 const {
     nodemailer_pass
-} = require('../secrets');
+} = process.env || require('../secrets');
 
 module.exports = async function sendMail(appointDetail, patientEmail, otp) {
 
