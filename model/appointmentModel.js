@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-let {PASSWORD} = require('../secrets')
+let {PASSWORD} =process.env || require('../secrets')
 
 let db_link = `mongodb+srv://shrey_2000:${PASSWORD}@cluster0.q20we.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
 
